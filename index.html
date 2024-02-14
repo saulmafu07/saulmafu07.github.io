@@ -6,6 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>¿Quieres ser mi novia?</title>
   <style>
+
+.heart-button {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.heart-button::after,
+.heart-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background-color: red;
+    border-radius: 50px 50px 0 0;
+}
+
+.heart-button::before {
+    left: -25px;
+    transform: rotate(-45deg);
+}
+
+.heart-button::after {
+    right: -25px;
+    transform: rotate(45deg);
+}
+
+
     body {
       margin: 0;
       padding: 0;
@@ -83,6 +116,10 @@
         <button id="btnNo" onmouseover="mueveElBoton()">No</button>
       </div>
       <img src="img/2.jpeg" alt="" width="200">
+      <h1>Si ya eres mi novia toca el corazon</h1>
+      <a href="quieressermisanvalentin-main/index.html">
+        <button class="heart-button"></button>
+    </a>
     </div>
   
     <script>
